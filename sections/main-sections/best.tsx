@@ -1,5 +1,5 @@
 import Container from "@/components/container";
-import Card from "@/components/ui/product-card";
+import Card from "@/components/card-ui/product-card";
 import Jacket from "@/public/images/big-jacket.png";
 import Trinajor from "@/public/images/big-trenajor.png";
 import Bag from "@/public/images/big-bag.png";

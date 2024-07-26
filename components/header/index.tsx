@@ -6,6 +6,7 @@ import Container from "@/components/container";
 import LogoIcon from "@/public/icons/main-logo.svg";
 import PhoneIcon from "@/public/icons/u_phone-alt.svg";
 import MailIcon from "@/public/icons/fi_mail.svg";
+import Link from "next/link";
 
 const Index = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,6 +14,12 @@ const Index = () => {
 
   const handleClick = () => {
     router.push("/");
+  };
+  const newsclick = () => {
+    router.push("/news");
+  };
+  const productclick = () => {
+    router.push("/product");
   };
 
   const toggleMenu = () => {
@@ -33,7 +40,10 @@ const Index = () => {
             </span>
           </div>
           <div className="hidden md:flex gap-[30px]">
-            <p className="text-[#fff] cursor-pointer hover:text-[#FFD700] transition duration-300">
+            <p
+              onClick={productclick}
+              className="text-[#fff] cursor-pointer hover:text-[#FFD700] transition duration-300"
+            >
               Продукты
             </p>
             <p className="text-[#fff] cursor-pointer hover:text-[#FFD700] transition duration-300">
@@ -42,7 +52,10 @@ const Index = () => {
             <p className="text-[#fff] cursor-pointer hover:text-[#FFD700] transition duration-300">
               Оплата и Доставка
             </p>
-            <p className="text-[#fff] cursor-pointer hover:text-[#FFD700] transition duration-300">
+            <p
+              onClick={newsclick}
+              className="text-[#fff] cursor-pointer hover:text-[#FFD700] transition duration-300"
+            >
               Новости
             </p>
             <p className="text-[#fff] cursor-pointer hover:text-[#FFD700] transition duration-300">

@@ -7,6 +7,7 @@ import Best from "@/sections/main-sections/best";
 import Products from "@/sections/main-sections/products";
 import Useful from "@/sections/main-sections/useful";
 import Advantages from "@/sections/main-sections/advantages";
+import Brands from "@/sections/main-sections/brands";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Best />
       <Useful />
       <Advantages />
+      <Brands />
     </>
   );
 }

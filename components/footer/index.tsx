@@ -12,7 +12,7 @@ import {
 export default function Index() {
   return (
     <footer className="w-full h-[50px]">
-      <div className="bg-[#FBD029] w-full h-[20px]"></div>
+      <div className="relative top-2 bg-[#FBD029] w-full h-[20px]"></div>
       <div className="bg-[#1F1D14] flex flex-col w-full py-10 md:flex-row items-start gap-5 md:items-center md:justify-between px-[85px] md:px-[110px]">
         <div className="flex max-w-[70px] text-[20px] font-semibold gap-[11px] text-white">
           <Image

@@ -1,5 +1,5 @@
 import Container from "@/components/container";
-import Card from "@/components/ui/catalog-card";
+import Card from "@/components/card-ui/catalog-card";
 import TranajorImage from "@/public/images/tranajor.png";
 import Balls from "@/public/images/balls.png";
 import LittleBoot from "@/public/images/little-boot.png";
