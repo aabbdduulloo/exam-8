@@ -1,4 +1,7 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
+import Nav from "@/sections/main-sections/nav";
 import Image from "next/image";
 import Eyes from "@/public/icons/u_eye.svg";
 import Home from "@/public/icons/u_home-alt.svg";
@@ -6,7 +9,31 @@ import Tranajor from "@/public/images/nimadir.png";
 import Discount from "@/sections/main-sections/discount";
 
 const Articles = () => {
-  const articles = [
+  const initialArticles = [
+    {
+      title: "Как правильно выбрать эллиптический тренажер?",
+      description:
+        "Эллиптические тренажеры популярны среди людей любого возраста и с разным уровнем физической подготовки...",
+      date: "27.01.2022",
+      views: 250,
+      icon: Eyes,
+    },
+    {
+      title: "Как правильно выбрать эллиптический тренажер?",
+      description:
+        "Эллиптические тренажеры популярны среди людей любого возраста и с разным уровнем физической подготовки...",
+      date: "27.01.2022",
+      views: 250,
+      icon: Eyes,
+    },
+    {
+      title: "Как правильно выбрать эллиптический тренажер?",
+      description:
+        "Эллиптические тренажеры популярны среди людей любого возраста и с разным уровнем физической подготовки...",
+      date: "27.01.2022",
+      views: 250,
+      icon: Eyes,
+    },
     {
       title: "Как правильно выбрать эллиптический тренажер?",
       description:
@@ -57,8 +84,19 @@ const Articles = () => {
     },
   ];
 
+  const [visibleArticles, setVisibleArticles] = useState(3);
+
+  const showMoreArticles = () => {
+    setVisibleArticles(prevCount => prevCount + 6);
+  };
+
   return (
     <div className="container mx-auto p-8">
+      <div className="relative bottom-6 ">
+        {" "}
+        <Nav />
+      </div>
+
       <div className="mb-8 flex items-center">
         <Image src={Home} alt="Home" width={16} height={16} />
         <a href="/" className="text-sm text-gray-600 ml-1">
@@ -70,7 +108,7 @@ const Articles = () => {
         Полезные информации
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {articles.map((article, index) => (
+        {initialArticles.slice(0, visibleArticles).map((article, index) => (
           <div
             key={index}
             className=" cursor-pointer p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
@@ -96,11 +134,16 @@ const Articles = () => {
           </div>
         ))}
       </div>
-      <div className="mt-8 flex justify-center">
-        <button className="cursor-pointer px-4 py-2 bg-yellow-500 text-white font-semibold rounded-lg hover:bg-yellow-600 transition-colors duration-300">
-          Показать ещё
-        </button>
-      </div>
+      {visibleArticles < initialArticles.length && (
+        <div className="mt-8 flex justify-center">
+          <button
+            onClick={showMoreArticles}
+            className="cursor-pointer px-4 py-2 bg-yellow-500 text-white font-semibold rounded-lg hover:bg-yellow-600 transition-colors duration-300"
+          >
+            Показать ещё
+          </button>
+        </div>
+      )}
       <div className="relative top-6">
         <Discount />
       </div>

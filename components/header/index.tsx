@@ -6,7 +6,6 @@ import Container from "@/components/container";
 import LogoIcon from "@/public/icons/main-logo.svg";
 import PhoneIcon from "@/public/icons/u_phone-alt.svg";
 import MailIcon from "@/public/icons/fi_mail.svg";
-import Link from "next/link";
 
 const Index = () => {
   const [isOpen, setIsOpen] = useState(false);
