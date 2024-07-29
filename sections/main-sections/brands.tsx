@@ -10,7 +10,7 @@ const Brands = () => {
   return (
     <div className="container mx-auto py-8 flex justify-center items-center bg-white rounded-lg shadow-lg max-w-full">
       <div className="grid grid-cols-7 gap-8 justify-center items-center">
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center animate-slideIn">
           <Image
             src={Brend1}
             alt="Puma Logo"
@@ -19,7 +19,7 @@ const Brands = () => {
             objectFit="contain"
           />
         </div>
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center animate-slideIn">
           <Image
             src={Brend2}
             alt="Under Armour Logo"
@@ -28,7 +28,7 @@ const Brands = () => {
             objectFit="contain"
           />
         </div>
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center animate-slideIn">
           <Image
             src={Brend3}
             alt="Nike Logo"
@@ -37,7 +37,7 @@ const Brands = () => {
             objectFit="contain"
           />
         </div>
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center animate-slideIn">
           <Image
             src={Brend4}
             alt="Adidas Logo"
@@ -46,7 +46,7 @@ const Brands = () => {
             objectFit="contain"
           />
         </div>
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center animate-slideIn">
           <Image
             src={Brend5}
             alt="Reebok Logo"
@@ -55,7 +55,7 @@ const Brands = () => {
             objectFit="contain"
           />
         </div>
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center animate-slideIn">
           <Image
             src={Brend1}
             alt="Puma Logo"
@@ -64,7 +64,7 @@ const Brands = () => {
             objectFit="contain"
           />
         </div>
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center animate-slideIn">
           <Image
             src={Brend3}
             alt="Under Armour Logo"

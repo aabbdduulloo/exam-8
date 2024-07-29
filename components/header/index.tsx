@@ -89,12 +89,12 @@ const Index = () => {
             }`}
           >
             <span
-              className={`block w-6 h-0.5 bg-white transition-transform ${
-                isOpen ? "translate-y-1.5 rotate-45" : ""
+              className={`absolute bottom-5 block w-6 h-0.5 bg-white transition-transform ${
+                isOpen ? "translate-y-3.5 rotate-45" : ""
               }`}
             ></span>
             <span
-              className={`block w-6 h-0.5 bg-white transition-opacity ${
+              className={`relative top-3 block w-6 h-0.5 bg-white transition-opacity ${
                 isOpen ? "opacity-0" : ""
               }`}
             ></span>

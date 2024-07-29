@@ -6,7 +6,7 @@ import Home from "@/public/icons/u_home-alt.svg";
 import Slider from "@mui/material/Slider";
 import { TextField, MenuItem, Button } from "@mui/material";
 import Discount from "@/sections/main-sections/products";
-import Forma from "@/public/images/gantel.png";
+import Balls from "@/public/images/balls.jpg";
 import { useRouter } from "next/navigation";
 
 const Products = () => {
@@ -66,7 +66,7 @@ const Products = () => {
   };
 
   const [priceRange, setPriceRange] = useState([3000, 40000]);
-  const handlePriceChange = (event, newValue) => {
+  const handlePriceChange = (event: any, newValue: any) => {
     setPriceRange(newValue);
   };
 
@@ -160,10 +160,10 @@ const Products = () => {
               >
                 <div onClick={singleproduct} className="mb-4 relative">
                   <Image
-                    src={Forma}
+                    src={Balls}
                     alt={product.title}
-                    width={300}
-                    height={200}
+                    width={408}
+                    height={317}
                     className="rounded-lg object-cover"
                   />
                   {product.badge && (
