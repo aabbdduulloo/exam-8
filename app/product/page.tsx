@@ -14,6 +14,7 @@ const Products = () => {
   const singleproduct = () => {
     router.push("/product-single");
   };
+
   const initialProducts = [
     {
       title: "Буца Nike Mercurial Superfly 8 FG",
@@ -183,9 +184,14 @@ const Products = () => {
                 ) : (
                   <div>{product.price}</div>
                 )}
-                <button className="mt-4 px-4 py-2 bg-yellow-500 text-white font-semibold rounded-lg hover:bg-yellow-600 transition-colors duration-300">
-                  В корзину
-                </button>
+                <div className="flex justify-between mt-4">
+                  <button className="px-4 py-2 bg-yellow-500 text-white font-semibold rounded-lg hover:bg-yellow-600 transition-colors duration-300">
+                    В корзину
+                  </button>
+                  <button className="px-4 py-2 bg-gray-200 text-gray-800 font-semibold rounded-lg hover:bg-gray-300 transition-colors duration-300">
+                    В избранное
+                  </button>
+                </div>
               </div>
             ))}
           </div>

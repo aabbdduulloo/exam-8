@@ -2,7 +2,6 @@
 import Image from "next/image";
 import React from "react";
 import Gantel from "@/public/images/gantel.png";
-import Gantel2 from "@/public/images/gantels.png";
 import Gantel3 from "@/public/images/sport.png";
 import Avatar from "@/public/images/Shahzod.svg";
 import SimilarProduct from "@/sections/similar-products";
@@ -49,7 +48,7 @@ const ProductDetail = () => {
       </div>
 
       <div className="flex flex-wrap lg:flex-nowrap">
-        <div className="w-full lg:w-3/4 p-4 bg-white rounded-lg shadow-lg">
+        <div className="w-full lg:w-2/3 p-4 bg-white rounded-lg shadow-lg">
           <Carousel
             autoplay
             arrows
@@ -63,32 +62,32 @@ const ProductDetail = () => {
                 className="relative w-full h-[300px] lg:h-[488px] bg-[#fff] flex items-center justify-center overflow-hidden rounded-lg"
               >
                 <Image
-                  className="z-10 w-1/2 h-1/2 relative left-64" //z-10 bo'lsa phone responsive bolad
-                  src={Gantel3}
+                  className="z-10 w-full h-full object-cover"
+                  src={image}
                   alt="carousel item"
-                  layout="intrinsic"
-                  width={408}
-                  height={317}
                 />
               </div>
             ))}
           </Carousel>
-          <div className="flex mt-4">
+          <div className="flex mt-4 justify-center space-x-2">
             {product.images.map((image, index) => (
-              <div key={index} className="mr-2">
+              <div
+                key={index}
+                className="cursor-pointer border border-gray-300 hover:border-yellow-500 transition-colors duration-300 p-1"
+              >
                 <Image
-                  src={Gantel3}
+                  src={image}
                   alt={product.title}
                   width={88}
                   height={69}
-                  className="rounded-lg cursor-pointer border border-gray-300 hover:border-yellow-500 transition-colors duration-300"
+                  className="rounded-lg"
                 />
               </div>
             ))}
           </div>
         </div>
 
-        <div className="w-full lg:w-1/4 lg:ml-8 mt-8 lg:mt-0">
+        <div className="w-full lg:w-1/3 lg:ml-8 mt-8 lg:mt-0">
           <h1 className="text-2xl font-bold mb-2">{product.title}</h1>
           <p className="mb-4">{product.description}</p>
           <p className="font-semibold mt-2">В комплекте: 2 шт.</p>

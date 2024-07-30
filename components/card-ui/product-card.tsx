@@ -1,8 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import CartIcon from "@/public/icons/u_shopping-cart-alt.svg";
 import HeartIcon from "@/public/icons/u_heart-sign.svg";
+import { useRouter } from "next/navigation";
 
-const Index = ({ image, title, price, content }: any) => {
+const Index = ({ image, title, price, content }) => {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push("/basket");
+  };
+
   return (
     <div className="cursor-pointer relative w-full max-w-[292px] h-[416px] bg-white rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
       <Image
@@ -34,7 +43,10 @@ const Index = ({ image, title, price, content }: any) => {
           {price} <span className="text-[12px]">UZS</span>
         </p>
       </div>
-      <button className="absolute bottom-0 bg-yellow-400 w-full py-[13px] flex items-center gap-[6px] justify-center transition-transform transform hover:scale-105">
+      <button
+        onClick={handleClick}
+        className="absolute bottom-0 bg-yellow-400 w-full py-[13px] flex items-center gap-[6px] justify-center transition-transform transform hover:scale-105"
+      >
         <Image src={CartIcon} alt="cart icon" className="w-[20px] h-[20px]" />
         <span className="text-[16px] md:text-[20px] font-medium">Корзина</span>
       </button>

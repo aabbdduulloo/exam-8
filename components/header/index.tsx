@@ -20,6 +20,12 @@ const Index = () => {
   const productclick = () => {
     router.push("/product");
   };
+  const aboutclick = () => {
+    router.push("/about-us");
+  };
+  const paymentclick = () => {
+    router.push("/payment");
+  };
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -48,7 +54,10 @@ const Index = () => {
             <p className="text-[#fff] cursor-pointer hover:text-[#FFD700] transition duration-300">
               Контакты
             </p>
-            <p className="text-[#fff] cursor-pointer hover:text-[#FFD700] transition duration-300">
+            <p
+              onClick={paymentclick}
+              className="text-[#fff] cursor-pointer hover:text-[#FFD700] transition duration-300"
+            >
               Оплата и Доставка
             </p>
             <p
@@ -57,7 +66,10 @@ const Index = () => {
             >
               Новости
             </p>
-            <p className="text-[#fff] cursor-pointer hover:text-[#FFD700] transition duration-300">
+            <p
+              onClick={aboutclick}
+              className="text-[#fff] cursor-pointer hover:text-[#FFD700] transition duration-300"
+            >
               О нас
             </p>
           </div>
@@ -109,19 +121,31 @@ const Index = () => {
       {isOpen && (
         <div className="md:hidden bg-[#000] text-[#fff] p-4">
           <div className="flex flex-col gap-[15px]">
-            <p className="cursor-pointer hover:text-[#FFD700] transition duration-300">
+            <p
+              onClick={productclick}
+              className="cursor-pointer hover:text-[#FFD700] transition duration-300"
+            >
               Продукты
             </p>
             <p className="cursor-pointer hover:text-[#FFD700] transition duration-300">
               Контакты
             </p>
-            <p className="cursor-pointer hover:text-[#FFD700] transition duration-300">
+            <p
+              onClick={paymentclick}
+              className="cursor-pointer hover:text-[#FFD700] transition duration-300"
+            >
               Оплата и Доставка
             </p>
-            <p className="cursor-pointer hover:text-[#FFD700] transition duration-300">
+            <p
+              onClick={newsclick}
+              className="cursor-pointer hover:text-[#FFD700] transition duration-300"
+            >
               Новости
             </p>
-            <p className="cursor-pointer hover:text-[#FFD700] transition duration-300">
+            <p
+              onClick={aboutclick}
+              className="cursor-pointer hover:text-[#FFD700] transition duration-300"
+            >
               О нас
             </p>
             <div className="flex flex-col gap-[15px] mt-4">

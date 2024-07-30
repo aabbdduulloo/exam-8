@@ -25,11 +25,8 @@ export default function RootLayout({
         <header className="bg-[#1F1D14]">
           <Header />
         </header>
-        <main>
-          {children}
-        </main>
+        <main>{children}</main> <Footer />
       </body>
-      <Footer/>
     </html>
   );
 }

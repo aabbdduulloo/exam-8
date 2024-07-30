@@ -37,14 +37,7 @@ const Index = () => {
                   </div>
                   <div className="absolute w-[380px] h-[380px] bg-[#FF563D] top-[10%] right-[10%] rounded-full" />
                   <div className="absolute w-[445px] h-[821px] bg-[#BDD400] rotate-[25deg] top-[-10%] right-[-10%] rounded-lg" />
-                  <div className="absolute top-[10%] left-[10%] z-20 text-center">
-                    <h2 className="font-extrabold text-[24px] lg:text-[32px] mb-[20px]">
-                      Бутсы Air Phantom GT2 Elite FG
-                    </h2>
-                    <button className="border-[#FBD029] border-2 rounded-[10px] py-[10px]  px-5  hover:bg-[#FBD029] hover:text-[#fff] transition-colors duration-300">
-                      Подробности
-                    </button>
-                  </div>
+                  <div className="absolute top-[10%] left-[10%] z-20 text-center"></div>
                 </div>
               ))}
             </Carousel>

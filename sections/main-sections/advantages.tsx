@@ -4,16 +4,7 @@ import Image from "next/image";
 
 const Advantages = () => {
   return (
-    <div
-      className="container mx-auto p-8"
-      style={{
-        width: "1240px",
-        height: "367px",
-        borderRadius: "8px",
-        backgroundColor: "#1F1D14",
-        color: "white",
-      }}
-    >
+    <div className="container mx-auto p-8 w-full lg:w-[75%] h-auto lg:h-[417px] px-[20px] lg:px-[35px] py-[25px] lg:py-[38px] bg-[#1F1D14] text-white rounded-lg">
       <h2 className="text-3xl font-bold mb-8 text-center">О нас</h2>
       <div className="grid grid-cols-1 md:grid-cols-1 gap-10 pl-12">
         <div className="flex flex-col items-center text-center">
@@ -29,12 +20,12 @@ const Advantages = () => {
             товара. <br /> Действует гибкая система скидок.
           </p>
         </div>
-        <div className="flex items-center justify-center ">
+        <div className="flex items-center justify-center">
           <Image
             src={Group}
             alt="Group Image"
             layout="intrinsic"
-            className="relative bottom-14 left-96"
+            className="relative bottom-10 left-32"
           />
         </div>
       </div>

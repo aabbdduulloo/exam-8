@@ -14,7 +14,9 @@ const Index = () => {
           <div className="flex items-center gap-4 w-full lg:w-auto">
             <button className="flex items-center gap-2 bg-[#1F1D14] px-4 py-2 rounded-md transition-transform transform hover:scale-105">
               <Image src={KatalogIcon} alt="icon" />
-              <span className="text-lg text-[#fff]">Каталог</span>
+              <span className="text-lg text-[#fff] hover:text-amber-300">
+                Каталог
+              </span>
             </button>
             <div className="relative flex-grow">
               <input
@@ -31,10 +33,10 @@ const Index = () => {
           </div>
           <div className="flex items-center gap-4 w-full lg:w-auto">
             <div className="flex items-center gap-2">
-              <button className="w-[45px] h-[45px] bg-[#F2F2F2] rounded-md flex items-center justify-center cursor-pointer transition-transform transform hover:scale-110">
+              <button className="icon-button">
                 <Image src={UserIcon} alt="user icon" />
               </button>
-              <button className="w-[45px] h-[45px] bg-[#F2F2F2] rounded-md flex items-center justify-center cursor-pointer transition-transform transform hover:scale-110">
+              <button className="icon-button">
                 <Image src={HeartIcon} alt="heart icon" />
               </button>
             </div>

@@ -12,7 +12,7 @@ const Index = () => {
         <p className="text-[32px] font-medium mb-[42px] pl-4 md:pl-0 text-center">
           Продукты
         </p>
-        <div className="grid gap-6 px-6 sm:px-14 md:px-10 lg:px-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 px-24 sm:px-14 md:px-10 lg:px-10 sm:grid-cols-2 lg:grid-cols-4">
           <Card
             image={Shoe}
             title="Бутса Nike Mercurial Superfly 8 FG"

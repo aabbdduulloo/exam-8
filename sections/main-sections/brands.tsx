@@ -8,7 +8,7 @@ import Brend5 from "@/public/images/Brend5.png";
 
 const Brands = () => {
   return (
-    <div className="container mx-auto py-8 flex justify-center items-center bg-white rounded-lg shadow-lg max-w-full">
+    <div className="container mx-auto py-8 px-5 flex justify-center items-center bg-white rounded-lg shadow-lg max-w-full">
       <div className="grid grid-cols-7 gap-8 justify-center items-center">
         <div className="flex justify-center items-center animate-slideIn">
           <Image
