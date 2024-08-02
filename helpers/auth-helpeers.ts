@@ -1,7 +1,8 @@
 import Cookies from "js-cookie";
-export const saveAccessToken = (access_token: string) => {
-  Cookies.set("access_token", access_token);
+
+export const saveToken = (access_token: string) => {
+  Cookies.set("token", access_token);
 };
-export const getAccessToken = () => {
-  return Cookies.get("access_token");
+export const getToken = () => {
+  return Cookies.get("token");
 };

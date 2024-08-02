@@ -8,6 +8,7 @@ import Products from "@/sections/main-sections/products";
 import Useful from "@/sections/main-sections/useful";
 import Advantages from "@/sections/main-sections/advantages";
 import Brands from "@/sections/main-sections/brands";
+import { ToastContainer } from "react-toastify";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <Useful />
       <Advantages />
       <Brands />
+      <ToastContainer />
     </>
   );
 }

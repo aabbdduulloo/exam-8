@@ -1,14 +1,22 @@
 import http from "@/api/interseptors";
-import { saveAccessToken } from "@/helpers/auth-helpeers";
-import { IAuth } from "@/types/auth";
-export const login = async (data: IAuth) => {
+import { saveToken } from "@/helpers/auth-helpeers";
+
+export const Login = async (data: any) => {
   try {
-    const response = await http.post("/auth/login", data);
-    if (response.status === 200) {
-      saveAccessToken(response?.data?.access_token);
+    const res = await http.post("/login", data);
+    if (res.status === 200) {
+      saveToken(res.data.access_token);
     }
-    return response.status;
-  } catch (error) {
-    console.log(error);
+    return res;
+  } catch (err) {
+    console.log(err);
+  }
+};
+export const Register = async (data: any) => {
+  try {
+    const res = await http.post("/register", data);
+    return res;
+  } catch (err) {
+    console.log(err);
   }
 };

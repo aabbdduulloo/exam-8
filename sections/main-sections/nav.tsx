@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Container from "@/components/container";
 import KatalogIcon from "@/public/icons/fi_layers.svg";
@@ -5,15 +7,30 @@ import SearchIcon from "@/public/icons/u_search.svg";
 import UserIcon from "@/public/icons/u_user.svg";
 import HeartIcon from "@/public/icons/u_heart-sign.svg";
 import CartIcon from "@/public/icons/u_shopping-cart-alt.svg";
+import { useState } from "react";
+import LoginModal from "@/app/user-modal/page";
 
 const Index = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const handleModalOpen = () => {
+    setModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setModalOpen(false);
+  };
+
   return (
     <section className="py-4">
       <Container>
         <div className="flex flex-col lg:flex-row items-center justify-between gap-3 h-[70px]">
           <div className="flex items-center gap-4 w-full lg:w-auto">
-            <button className="flex items-center gap-2 bg-[#1F1D14] px-4 py-2 rounded-md transition-transform transform hover:scale-105">
-              <Image src={KatalogIcon} alt="icon" />
+            <button
+              className="flex items-center gap-2 bg-[#1F1D14] px-4 py-2 rounded-md transition-transform transform hover:scale-105"
+              aria-label="Каталог"
+            >
+              <Image src={KatalogIcon} alt="catalog icon" />
               <span className="text-lg text-[#fff] hover:text-amber-300">
                 Каталог
               </span>
@@ -33,20 +50,28 @@ const Index = () => {
           </div>
           <div className="flex items-center gap-4 w-full lg:w-auto">
             <div className="flex items-center gap-2">
-              <button className="icon-button">
+              <button
+                onClick={handleModalOpen}
+                className="icon-button"
+                aria-label="User profile"
+              >
                 <Image src={UserIcon} alt="user icon" />
               </button>
-              <button className="icon-button">
+              <button className="icon-button" aria-label="Favorites">
                 <Image src={HeartIcon} alt="heart icon" />
               </button>
             </div>
-            <button className="flex items-center gap-2 bg-[#F2F2F2] px-4 py-2 rounded-md transition-transform transform hover:scale-105">
+            <button
+              className="flex items-center gap-2 bg-[#F2F2F2] px-4 py-2 rounded-md transition-transform transform hover:scale-105"
+              aria-label="Корзина"
+            >
               <Image src={CartIcon} alt="cart icon" />
               <span className="text-lg">Корзина</span>
             </button>
           </div>
         </div>
       </Container>
+      {isModalOpen && <LoginModal onClose={handleModalClose} />}
     </section>
   );
 };

@@ -40,3 +40,59 @@ const Index = () => {
 };
 
 export default Index;
+
+// "use client";
+
+// import React, { useEffect, useState } from "react";
+// import Container from "@/components/container";
+// import Card from "@/components/card-ui/product-card";
+// import { getProduct } from "@/service/prdoduct.service";
+
+// const Index = () => {
+//   const [products, setProducts] = useState<any[]>([]);
+//   const [loading, setLoading] = useState<boolean>(true);
+
+//   useEffect(() => {
+//     const fetchProducts = async () => {
+//       try {
+//         const response = await getProduct(10, 1);
+//         console.log("Fetched products:", response);
+//         setProducts(response.data.products);
+//       } catch (error) {
+//         console.error("Error fetching products:", error);
+//       } finally {
+//         setLoading(false);
+//       }
+//     };
+
+//     fetchProducts();
+//   }, []);
+
+//   if (loading) return <p>Loading...</p>;
+
+//   return (
+//     <section className="py-[70px] bg-[#F2F2F2]">
+//       <Container>
+//         <p className="text-[32px] font-medium mb-[42px] pl-4 md:pl-0 text-center">
+//           Продукты
+//         </p>
+//         <div className="grid gap-6 px-24 sm:px-14 md:px-10 lg:px-10 sm:grid-cols-2 lg:grid-cols-4">
+//           {Array.isArray(products) ? (
+//             products.map((product: any) => (
+//               <Card
+//                 key={product.id}
+//                 image={product.product_image}
+//                 title={product.product_title}
+//                 price={product.product_price}
+//               />
+//             ))
+//           ) : (
+//             <p>Products data is not available</p>
+//           )}
+//         </div>
+//       </Container>
+//     </section>
+//   );
+// };
+
+// export default Index;
